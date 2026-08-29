@@ -1,0 +1,20 @@
+{
+  "name": "warung-laras-server",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=../.env index.js",
+    "start": "node --env-file=../.env index.js",
+    "prisma:generate": "prisma generate --schema ../prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate dev --schema ../prisma/schema.prisma",
+    "prisma:seed-menu": "node seed-menu.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "prisma": "^5.19.0",
+    "ws": "^8.17.0"
+  }
+}
